@@ -1,3 +1,3 @@
 # My Homepage
 
-https://ryunmi.github.io/
+https://RyunMi.github.io/
