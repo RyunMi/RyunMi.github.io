@@ -19,12 +19,12 @@ html {
 }
 
 
-/* body { 
+/* body {
   font-family: "LXGW WenKai GB Screen", sans-serif;
   color: #000;
-  background-color: #ffffff; 
+  background-color: #ffffff;
   text-align:left;
-  margin-top: 30px; 
+  margin-top: 30px;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -42,13 +42,13 @@ body {
 	text-align: left;
 	max-width: 960px;
 
-	margin-top: 40px;
-	margin-bottom: 40px;
+	margin-top: 28px;
+	margin-bottom: 28px;
 	margin-left: auto;
 	margin-right: auto;
 
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 30px;
+	padding-bottom: 28px;
 	padding-left: 50px;
 	padding-right: 50px;
 
@@ -108,6 +108,15 @@ body {
 	transform-origin: center center;
 }
 
+#layout-content img.pub-img {
+	border-radius: 6px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+}
+
+#layout-content img.pub-img:hover {
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.16);
+}
+
 .pub-img:hover {
 	transform: scale(1.02);
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
@@ -139,6 +148,31 @@ body {
 
 	transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 
+}
+
+#modal-close {
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	z-index: 1;
+	width: 44px;
+	height: 44px;
+	padding: 0;
+	border: 0;
+	border-radius: 50%;
+	background: rgba(0, 0, 0, 0.35);
+	color: #fff;
+	font: 32px/1 Arial, sans-serif;
+	cursor: pointer;
+}
+
+#modal-close:hover {
+	background: rgba(0, 0, 0, 0.55);
+}
+
+#modal-close:focus-visible {
+	outline: 2px solid #fff;
+	outline-offset: 3px;
 }
 
 /* --- Mac-style Image Zoom Effect --- */
@@ -195,7 +229,7 @@ div.menu-item {
 
 div#toptitle {
 	padding-bottom: 0.2em;
-	margin-bottom: 1.5em;
+	margin-bottom: 0.8em;
 	/*border-bottom: 3px double gray;*/
 }
 
@@ -239,8 +273,9 @@ h1 {
 }
 
 h2 {
-	padding-top: 0.8em;
+	padding-top: 0.5em;
 	font-size: 125%;
+	border-bottom-color: #c6ccd2;
 }
 
 h2+h3 {
@@ -254,7 +289,7 @@ h3 {
 
 p {
 	margin-top: 0.0em;
-	margin-bottom: 0.8em;
+	margin-bottom: 0.55em;
 	padding: 0;
 	line-height: 1.3;
 }
@@ -268,7 +303,7 @@ div#footer {
 	font-size: small;
 	border-top: 1px solid #c0c0c0;
 	padding-top: 0.1em;
-	margin-top: 4.0em;
+	margin-top: 2.2em;
 	color: #c0c0c0;
 }
 
@@ -480,4 +515,316 @@ table.imgtable,
 table.imgtable td {
 	border: none;
 	text-align: left;
+}
+
+#tbPublications p {
+    margin-top: 0;
+    margin-bottom: 3px;
+    line-height: 1.4;
+}
+
+#tbPublications p:last-child {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+#tbEducation p {
+    margin-top: 0;
+    margin-bottom: 3px;
+    line-height: 1.4;
+}
+
+#tbEducation p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Badges --- */
+.badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: bold;
+    vertical-align: middle;
+    margin-left: 6px;
+    margin-bottom: 3px;
+}
+
+.badge-oral {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+/* --- Site-specific refinements --- */
+body {
+	color: #1f2933;
+}
+
+#layout-content img:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.profile-table {
+	table-layout: fixed;
+	margin-bottom: -0.2em;
+}
+
+.profile-info {
+	width: auto;
+	position: relative;
+}
+
+/* A quiet football vignette in the unused part of the desktop header. */
+.profile-info::after {
+	content: "";
+	position: absolute;
+	left: 275px;
+	right: 8px;
+	top: calc(50% + 10px);
+	height: 205px;
+	transform: translateY(-50%);
+	background: url("./pic/china-football.jpg") center / cover no-repeat;
+	opacity: 0.72;
+	filter: brightness(1.16) saturate(0.9) blur(0.15px);
+	border-radius: 36px;
+	/* Fade over the image without an external mask, including file:// previews. */
+	box-shadow: inset 0 0 20px 14px #fff;
+	pointer-events: none;
+}
+
+@media screen and (max-width: 900px) {
+	.profile-info::after {
+		display: none;
+	}
+}
+
+.profile-photo {
+	width: 210px;
+	text-align: right;
+	vertical-align: top;
+}
+
+.profile-photo img {
+	width: 190px;
+	max-width: 100%;
+	height: auto;
+}
+
+#layout-content .social-icon {
+	width: 30px;
+	height: 30px;
+	margin: 0 3px -3px 0;
+	border-radius: 50%;
+	box-shadow: none;
+}
+
+.pub-img:focus-visible,
+a:focus-visible {
+	outline: 2px solid #527bbd;
+	outline-offset: 3px;
+}
+
+.publication-note {
+	margin-top: -0.25em;
+	color: #59636e;
+	font-size: 0.92em;
+}
+
+.publication-category {
+	padding-bottom: 9px;
+	color: inherit;
+}
+
+.publication-category-next {
+	padding-top: 9px;
+}
+
+.project-category {
+	margin-top: 0.75em;
+	margin-bottom: 0.15em;
+}
+
+h2 + .project-category {
+	margin-top: 0;
+}
+
+#tbPublications td[style*="padding-bottom: 20px"] {
+	padding-bottom: 12px !important;
+}
+
+.affiliation-table .logo-cell {
+	width: 130px;
+	vertical-align: middle;
+}
+
+#layout-content .github-stars {
+	display: inline-block;
+	margin-left: 5px;
+	text-decoration: none;
+}
+
+#layout-content .github-stars img,
+#layout-content .github-stars img:hover {
+	display: inline;
+	vertical-align: middle;
+	border-radius: 3px;
+	box-shadow: none;
+	transform: none;
+}
+
+#tbExperience p {
+	margin-top: 0;
+	margin-bottom: 3px;
+	line-height: 1.4;
+}
+
+#tbExperience p:last-child {
+	margin-bottom: 0;
+}
+
+.copyright {
+	text-align: center;
+	color: #7a838c;
+	font-size: 0.88em;
+}
+
+@media (max-width: 700px) {
+	html {
+		background-color: #ffffff;
+	}
+
+	body {
+		width: auto;
+		max-width: none;
+		margin: 0;
+		padding: 24px 18px 32px;
+		border-radius: 0;
+		box-shadow: none;
+	}
+
+	#layout-content {
+		padding: 0;
+	}
+
+	.profile-table,
+	.profile-table tbody,
+	.profile-table tr,
+	.profile-table td {
+		display: block;
+		width: 100%;
+	}
+
+	.profile-table tr {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	.profile-photo {
+		width: 100%;
+		position: relative;
+		margin-bottom: 12px;
+		text-align: left;
+	}
+
+	.profile-photo img {
+		width: 150px;
+	}
+
+	.profile-photo::after {
+		content: "";
+		position: absolute;
+		right: 0;
+		top: 50%;
+		width: calc(100% - 164px);
+		max-width: 280px;
+		aspect-ratio: 1306 / 602;
+		transform: translateY(-50%);
+		background: url("./pic/china-football.jpg") center / cover no-repeat;
+		opacity: 0.76;
+		filter: brightness(1.16) saturate(0.9);
+		border-radius: 18px;
+		box-shadow: inset 0 0 10px 7px #fff;
+		pointer-events: none;
+	}
+
+	div#toptitle {
+		margin-bottom: 0.7em;
+	}
+
+	#tbPublications,
+	#tbPublications tbody,
+	#tbPublications tr,
+	#tbPublications td {
+		display: block;
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	#tbPublications td[colspan] {
+		padding-top: 10px;
+	}
+
+	#tbPublications td:first-child:not([colspan]) {
+		padding-bottom: 10px !important;
+	}
+
+	#tbPublications td:last-child {
+		padding-bottom: 24px;
+	}
+
+	#layout-content .pub-img {
+		width: 100%;
+		max-width: 360px;
+		height: auto;
+	}
+
+	.affiliation-table,
+	.affiliation-table tbody,
+	.affiliation-table tr,
+	.affiliation-table td {
+		display: block;
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	.affiliation-table tr {
+		padding-bottom: 22px;
+	}
+
+	.affiliation-table tr:last-child {
+		padding-bottom: 0;
+	}
+
+	.affiliation-table .logo-cell {
+		width: 100%;
+		padding-bottom: 8px !important;
+	}
+
+	#layout-content .affiliation-table .logo-cell img {
+		width: 86px;
+		height: auto;
+	}
+
+	h1 {
+		font-size: 155%;
+	}
+
+	h2 {
+		line-height: 1.2;
+	}
+
+	.badge {
+		margin-left: 0;
+		margin-top: 4px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
+	}
 }
