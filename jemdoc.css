@@ -570,6 +570,10 @@ body {
 	margin-bottom: -0.2em;
 }
 
+.profile-table + h2 {
+	margin-top: 0.2em;
+}
+
 .profile-info {
 	width: auto;
 	position: relative;
@@ -584,7 +588,7 @@ body {
 	top: calc(50% + 10px);
 	height: 205px;
 	transform: translateY(-50%);
-	background: url("./pic/china-football.jpg") center / cover no-repeat;
+	background: url("./pic/china-football.jpg?v=20261007") center bottom / cover no-repeat;
 	opacity: 0.72;
 	filter: brightness(1.16) saturate(0.9) blur(0.15px);
 	border-radius: 36px;
@@ -626,9 +630,12 @@ a:focus-visible {
 }
 
 .publication-note {
-	margin-top: -0.25em;
+	display: inline-block;
+	margin-left: 0.35em;
 	color: #59636e;
-	font-size: 0.92em;
+	font-size: 0.65em;
+	font-weight: normal;
+	line-height: 1.4;
 }
 
 .publication-category {
@@ -740,7 +747,7 @@ h2 + .project-category {
 		max-width: 280px;
 		aspect-ratio: 1306 / 602;
 		transform: translateY(-50%);
-		background: url("./pic/china-football.jpg") center / cover no-repeat;
+		background: url("./pic/china-football.jpg?v=20261007") center bottom / cover no-repeat;
 		opacity: 0.76;
 		filter: brightness(1.16) saturate(0.9);
 		border-radius: 18px;
